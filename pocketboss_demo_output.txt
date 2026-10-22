@@ -1,0 +1,186 @@
+﻿============================================================================
+Initializing PocketBoss Database Schema...
+============================================================================
+
+============================================================================
+RUNNING POCKETBOSS COMPLETE DEMONSTRATION & TEST HARNESS
+============================================================================
+----------------------------------------------------------------------
+TEST 1: Creating Accounts with Initial Balances
+----------------------------------------------------------------------
+>>> Account successfully opened: PB-1001 (Jeremy Davis) with initial balance $35,000.00
+>>> Account successfully opened: PB-1002 (Alice Vance) with initial balance $12,500.00
+>>> Account successfully opened: PB-1003 (Bob Martinez) with initial balance $2,000.00
+----------------------------------------------------------------------
+TEST 2: Depositing Additional Funds
+----------------------------------------------------------------------
+>>> Deposit of $5,000.00 to [PB-1001] successful. New Balance: $40,000.00
+----------------------------------------------------------------------
+TEST 3: Setting Monthly Category Budgets for Jeremy (2026-10)
+----------------------------------------------------------------------
+>>> New budget created for [PB-1001], Category: Groceries, Month: 2026-10 -> Limit: $800.00
+>>> New budget created for [PB-1001], Category: Tech & Electronics, Month: 2026-10 -> Limit: $2,500.00
+>>> New budget created for [PB-1001], Category: Dining & Cafes, Month: 2026-10 -> Limit: $600.00
+>>> New budget created for [PB-1001], Category: Utilities & Bills, Month: 2026-10 -> Limit: $450.00
+----------------------------------------------------------------------
+TEST 4: Recording Itemized Purchases & Budget Monitoring
+----------------------------------------------------------------------
+>>> PURCHASE RECORDED: [Organic Milk & Vegetables] x1 @ $145.50 = $145.50
+Merchant: WholeFoods | Account: PB-1001 | Remaining Bal: $39,854.50
+[Budget Status: OK] $145.50 spent of $800.00 (18%).
+>>> PURCHASE RECORDED: [Espresso & Croissant] x2 @ $18.00 = $36.00
+Merchant: Artisan Roasters | Account: PB-1001 | Remaining Bal: $39,818.50
+[Budget Status: OK] $36.00 spent of $600.00 (6%).
+>>> PURCHASE RECORDED: [UltraWide 34in Monitor] x1 @ $1,950.00 = $1,950.00
+Merchant: Amazon | Account: PB-1001 | Remaining Bal: $37,868.50
+[BUDGET WARNING - THRESHOLD REACHED!] Category "Tech & Electronics" is at 78% of monthly budget limit ($1,950.00 / $2,500.00).
+>>> PURCHASE RECORDED: [Mechanical Gaming Keyboard] x1 @ $750.00 = $750.00
+Merchant: Keychron | Account: PB-1001 | Remaining Bal: $37,118.50
+[BUDGET ALERT - EXCEEDED!] Category "Tech & Electronics" spending is $2,700.00 / $2,500.00 (108%). Over budget by $200.00!
+>>> PURCHASE RECORDED: [Fiber Internet 1Gbps] x1 @ $120.00 = $120.00
+Merchant: Spectrum | Account: PB-1001 | Remaining Bal: $36,998.50
+[Budget Status: OK] $120.00 spent of $450.00 (27%).
+>>> PURCHASE RECORDED: [Weekend Sushi Dinner] x1 @ $160.00 = $160.00
+Merchant: Sakura Bistro | Account: PB-1001 | Remaining Bal: $36,838.50
+[Budget Status: OK] $196.00 spent of $600.00 (33%).
+----------------------------------------------------------------------
+TEST 5: Peer-to-Peer Fund Transfers (Jeremy -> Alice)
+----------------------------------------------------------------------
+>>> Transfer SUCCESSFUL: $3,200.00 transferred from [PB-1001] to [PB-1002].
+Sender New Balance: $33,638.50 | Recipient New Balance: $15,700.00
+----------------------------------------------------------------------
+TEST 6: Exception Handling Demonstrations (Intentional Failures)
+----------------------------------------------------------------------
+--> Case A: Attempting Transfer with Insufficient Funds:
+[TRANSFER FAILED] Insufficient funds in [PB-1003]. Current Balance: $2,000.00, Requested: $99,999.00
+--> Case B: Attempting Transfer to the Same Account:
+[TRANSFER FAILED] Sender and recipient accounts cannot be the same (PB-1001).
+--> Case C: Attempting Transfer to Non-Existent Account:
+[ERROR] Recipient account [PB-99999] does not exist.
+[TRANSFER FAILED] Transaction aborted: Account verification failed.
+--> Case D: Attempting Purchase with Insufficient Balance:
+[PURCHASE REJECTED] Insufficient funds! Needed: $50,000.00, Available: $2,000.00
+----------------------------------------------------------------------
+TEST 7: Savings Growth Simulation (Showcasing WHILE Loop)
+----------------------------------------------------------------------
+===================================================================================================
+POCKETBOSS SAVINGS COMPOUND GROWTH PROJECTION (WHILE LOOP DEMO)
+Base Balance: $15,700.00 | Monthly Add: $1,000.00 | Annual Rate: 6.5% | Duration: 6 Months
+===================================================================================================
++--------+-------------------+--------------------+--------------------+---------------------------+
+| Month  | Starting Balance  | Monthly Addition   | Interest Earned    | End of Month Balance	   |
++--------+-------------------+--------------------+--------------------+---------------------------+
+|      1 |	  $15,700.00 |		$1,000.00 |		$90.46 |		$16,790.46 |
+|      2 |	  $16,790.46 |		$1,000.00 |		$96.36 |		$17,886.82 |
+|      3 |	  $17,886.82 |		$1,000.00 |	       $102.30 |		$18,989.13 |
+|      4 |	  $18,989.13 |		$1,000.00 |	       $108.27 |		$20,097.40 |
+|      5 |	  $20,097.40 |		$1,000.00 |	       $114.28 |		$21,211.68 |
+|      6 |	  $21,211.68 |		$1,000.00 |	       $120.31 |		$22,331.99 |
++--------+-------------------+--------------------+--------------------+---------------------------+
+| FINAL PROJECTED BALANCE: $22,331.99 | Total Interest Earned: $631.99 |
++--------------------------------------------------------------------------------------------------+
+----------------------------------------------------------------------
+TEST 8: Batch Savings Interest Crediting (Showcasing Cursor Loop)
+----------------------------------------------------------------------
+>>> Starting Batch Monthly Interest Processing @ 5% p.a. ...
+* Credited $65.42 interest to [PB-1002] (Alice Vance). New Bal: $15,765.42
+>>> Batch Interest Completed. Total Accounts Credited: 1
+======================================================================
+GENERATING ALL EXECUTIVE FINANCIAL REPORTS FOR SCREENSHOTS
+======================================================================
++------------------------------------------------------------------------------+
+|			POCKETBOSS ACCOUNT DASHBOARD			       |
++------------------------------------------------------------------------------+
+| Account Number     : PB-1001						      |
+| Account Holder     : Jeremy Davis					      |
+| Account Type	     : Checking 					      |
+| Account Status     : ACTIVE						      |
+| Created Date	     : 22-OCT-2026 08:37				      |
++------------------------------------------------------------------------------+
+| Current Balance    : $33,638.50					      |
+| Lifetime Deposited : $40,000.00					      |
+| Lifetime Spent     : $3,161.50					      |
+| Total Transactions : 9						      |
+| Financial Tier     : GOLD (Strong)					      |
++------------------------------------------------------------------------------+
+===================================================================================================================
+POCKETBOSS MONTHLY BUDGET PERFORMANCE REPORT
+Account: PB-1001 (Jeremy Davis)       Period: 2026-10	    Generated: 22-OCT-2026 08:37
+===================================================================================================================
++----------------------+---------------+---------------+---------------+----------------------+-------------------+
+| Category Name        |  Budget Limit |  Actual Spent |   Variance    |  Budget Utilization  | Status		  |
++----------------------+---------------+---------------+---------------+----------------------+-------------------+
+| Dining & Cafes       |       $600.00 |       $196.00 |       $404.00 | [====	      ]  33%  | SAFE (On Track)   |
+| Groceries	       |       $800.00 |       $145.50 |       $654.50 | [==	      ]  18%  | SAFE (On Track)   |
+| Tech & Electronics   |     $2,500.00 |     $2,700.00 |      $-200.00 | [============] 108%  | !! EXCEEDED !!	  |
+| Utilities & Bills    |       $450.00 |       $120.00 |       $330.00 | [===	      ]  27%  | SAFE (On Track)   |
++----------------------+---------------+---------------+---------------+----------------------+-------------------+
+| TOTALS	       |     $4,350.00 |     $3,161.50 |     $1,188.50 | [=========   ]  73%  | OVERALL HEALTHY   |
++----------------------+---------------+---------------+---------------+----------------------+-------------------+
+===================================================================================================================
+POCKETBOSS ITEMIZED PURCHASES & EXPENSE LEDGER
+Account: PB-1001 (Jeremy Davis)       Period: 2026-10	    Generated: 22-OCT-2026 08:37
+===================================================================================================================
++------+----------------------+----------------------+-----+-------------+-------------+------------------+-------------+
+| ID   | Item Description     | Category	     | Qty |  Unit Price | Total Price | Merchant	  | Date	|
++------+----------------------+----------------------+-----+-------------+-------------+------------------+-------------+
+|    6 | Weekend Sushi Dinner | Dining & Cafes	     |	 1 |	 $160.00 |     $160.00 | Sakura Bistro	  | 22-OCT-2026 |
+|    5 | Fiber Internet 1Gbps | Utilities & Bills    |	 1 |	 $120.00 |     $120.00 | Spectrum	  | 22-OCT-2026 |
+|    4 | Mechanical Gaming Ke | Tech & Electronics   |	 1 |	 $750.00 |     $750.00 | Keychron	  | 22-OCT-2026 |
+|    3 | UltraWide 34in Monit | Tech & Electronics   |	 1 |   $1,950.00 |   $1,950.00 | Amazon 	  | 22-OCT-2026 |
+|    2 | Espresso & Croissant | Dining & Cafes	     |	 2 |	  $18.00 |	$36.00 | Artisan Roasters | 22-OCT-2026 |
+|    1 | Organic Milk & Veget | Groceries	     |	 1 |	 $145.50 |     $145.50 | WholeFoods	  | 22-OCT-2026 |
++------+----------------------+----------------------+-----+-------------+-------------+------------------+-------------+
+| TOTAL PURCHASES:    7 items									    GRAND TOTAL: $3,161.50 |
++------------------------------------------------------------------------------------------------------------------+
+===================================================================================================================
+POCKETBOSS OFFICIAL ACCOUNT STATEMENT & LEDGER
+Account: PB-1001 (Jeremy Davis)       Closing Balance: $33,638.50	Statement Date: 22-OCT-2026
+===================================================================================================================
++-------+-------------+--------------+---------------+------------------------------------------+------------------+
+| Txn # | Date	      | Type	     |	      Amount | Description				| Running Balance  |
++-------+-------------+--------------+---------------+------------------------------------------+------------------+
+|  5001 | 22-OCT-2026 | DEPOSIT      |	  $35,000.00 | Initial Account Opening Deposit		|	$35,000.00 |
+|  5004 | 22-OCT-2026 | DEPOSIT      |	   $5,000.00 | Bonus Direct Deposit			|	$40,000.00 |
+|  5005 | 22-OCT-2026 | PURCHASE     |	     $145.50 | Purchased Organic Milk & Vegetables (Gro |	$39,854.50 |
+|  5006 | 22-OCT-2026 | PURCHASE     |	      $36.00 | Purchased Espresso & Croissant (Dining & |	$39,818.50 |
+|  5007 | 22-OCT-2026 | PURCHASE     |	   $1,950.00 | Purchased UltraWide 34in Monitor (Tech & |	$37,868.50 |
+|  5008 | 22-OCT-2026 | PURCHASE     |	     $750.00 | Purchased Mechanical Gaming Keyboard (Te |	$37,118.50 |
+|  5009 | 22-OCT-2026 | PURCHASE     |	     $120.00 | Purchased Fiber Internet 1Gbps (Utilitie |	$36,998.50 |
+|  5010 | 22-OCT-2026 | PURCHASE     |	     $160.00 | Purchased Weekend Sushi Dinner (Dining & |	$36,838.50 |
+|  5011 | 22-OCT-2026 | TRANSFER_OUT |	   $3,200.00 | Project Consulting Reimbursement (To PB- |	$33,638.50 |
++-------+-------------+--------------+---------------+------------------------------------------+------------------+
+| Total Entries:    9									  CURRENT BALANCE: $33,638.50 |
++------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+|			POCKETBOSS ACCOUNT DASHBOARD			       |
++------------------------------------------------------------------------------+
+| Account Number     : PB-1002						      |
+| Account Holder     : Alice Vance					      |
+| Account Type	     : Savings						      |
+| Account Status     : ACTIVE						      |
+| Created Date	     : 22-OCT-2026 08:37				      |
++------------------------------------------------------------------------------+
+| Current Balance    : $15,765.42					      |
+| Lifetime Deposited : $12,500.00					      |
+| Lifetime Spent     : $0.00						      |
+| Total Transactions : 3						      |
+| Financial Tier     : SILVER (Moderate)				      |
++------------------------------------------------------------------------------+
+===================================================================================================================
+POCKETBOSS OFFICIAL ACCOUNT STATEMENT & LEDGER
+Account: PB-1002 (Alice Vance)	     Closing Balance: $15,765.42       Statement Date: 22-OCT-2026
+===================================================================================================================
++-------+-------------+--------------+---------------+------------------------------------------+------------------+
+| Txn # | Date	      | Type	     |	      Amount | Description				| Running Balance  |
++-------+-------------+--------------+---------------+------------------------------------------+------------------+
+|  5002 | 22-OCT-2026 | DEPOSIT      |	  $12,500.00 | Initial Account Opening Deposit		|	$12,500.00 |
+|  5012 | 22-OCT-2026 | TRANSFER_IN  |	   $3,200.00 | Project Consulting Reimbursement (From P |	$15,700.00 |
+|  5013 | 22-OCT-2026 | INTEREST     |	      $65.42 | Monthly Savings Interest Credited	|	$15,765.42 |
++-------+-------------+--------------+---------------+------------------------------------------+------------------+
+| Total Entries:    3									  CURRENT BALANCE: $15,765.42 |
++------------------------------------------------------------------------------------------------------------------+
+
+============================================================================
+PocketBoss Build, Deployment, & Execution Completed Successfully!
+============================================================================
